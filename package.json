@@ -1,0 +1,26 @@
+{
+  "name": "turborepo-template",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antfu/turborepo-template.git"
+  },
+  "homepage": "https://github.com/antfu/turborepo-template#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && vite build",
+    "dev": "turbo run dev",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx,.vue --fix"
+  },
+  "keywords": [],
+  "author": "wenrenfangge",
+  "license": "GPL-3.0-only",
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}
