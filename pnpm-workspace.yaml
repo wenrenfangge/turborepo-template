@@ -2,6 +2,15 @@ packages:
   - packages/*
   - apps/*
   - lib/*
+  - internal/*
+  - internal/lint-configs/*
+  - packages/@core/base/*
+  - packages/@core/ui-kit/*
+  - packages/@core/forward/*
+  - packages/@core/*
+  - scripts/*
+  - docs
+  - playground
 catalog:
   js-yaml: ^4.1.0
   turbo: 2.5.6
