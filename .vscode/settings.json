@@ -1,5 +1,4 @@
 {
-  "tailwindCSS.experimental.configFile": "internal/tailwind-config/src/index.ts",
   // workbench
   "workbench.list.smoothScrolling": true,
   "workbench.startupEditor": "newUntitledFile",
@@ -11,10 +10,11 @@
   "workbench.editor.limit.value": 5,
 
   // editor
+  "editor.formatOnSave": true, // 保存的时候自动格式化
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "editor.cursorBlinking": "expand",
-  "editor.largeFileOptimizations": true,
+  "editor.largeFileOptimizations": false,
   "editor.accessibilitySupport": "off",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.guides.bracketPairs": "active",
@@ -55,14 +55,14 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   // extensions
   "extensions.ignoreRecommendations": true,
@@ -91,7 +91,6 @@
     "**/bower_components": true,
     "**/.turbo": true,
     "**/.idea": true,
-    "**/.vitepress": true,
     "**/tmp": true,
     "**/.git": true,
     "**/.svn": true,
@@ -112,8 +111,6 @@
     "**/dist/**": true,
     "**/yarn.lock": true
   },
-
-  "typescript.tsserver.exclude": ["**/node_modules", "**/dist", "**/.turbo"],
 
   // search
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
@@ -179,36 +176,10 @@
     "html",
     "markdown",
     "json",
+    // 允许注释的 JSON 格式
     "jsonc",
     "json5"
   ],
-
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
-
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
-    "plaintext": false,
-    "yaml": false
-  },
-
-  "cssVariables.lookupFiles": ["packages/core/base/design/src/**/*.css"],
-
-  "i18n-ally.localesPaths": [
-    "packages/locales/src/langs",
-    "playground/src/locales/langs",
-    "apps/*/src/locales/langs"
-  ],
-  "i18n-ally.pathMatcher": "{locale}/{namespace}.{ext}",
-  "i18n-ally.enabledParsers": ["json"],
-  "i18n-ally.sourceLanguage": "en",
-  "i18n-ally.displayLanguage": "zh-CN",
-  "i18n-ally.enabledFrameworks": ["vue", "react"],
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.sortKeys": true,
-  "i18n-ally.namespace": true,
 
   // 控制相关文件嵌套展示
   "explorer.fileNesting.enabled": true,
@@ -217,25 +188,13 @@
     "*.ts": "$(capture).test.ts, $(capture).test.tsx, $(capture).spec.ts, $(capture).spec.tsx, $(capture).d.ts",
     "*.tsx": "$(capture).test.ts, $(capture).test.tsx, $(capture).spec.ts, $(capture).spec.tsx,$(capture).d.ts",
     "*.env": "$(capture).env.*",
-    "README.md": "README*,CHANGELOG*,LICENSE,CNAME",
+    "README.md": "README*,CHANGELOG*,LICENSE,CNAME,Todo*",
     "package.json": "pnpm-lock.yaml,pnpm-workspace.yaml,.gitattributes,.gitignore,.gitpod.yml,.npmrc,.browserslistrc,.node-version,.git*,.tazerc.json",
-    "eslint.config.mjs": ".eslintignore,.prettierignore,.stylelintignore,.commitlintrc.*,.prettierrc.*,stylelint.config.*,.lintstagedrc.mjs,cspell.json,lefthook.yml",
-    "tailwind.config.mjs": "postcss.*"
+    "eslint.config.mjs": ".eslintignore,.prettierignore,.stylelintignore,.commitlintrc.*,.prettierrc.*,prettier.config.*,stylelint.config.*,.lintstagedrc.mjs,cspell.json"
   },
   "commentTranslate.hover.enabled": false,
   "commentTranslate.multiLineMerge": true,
   "vue.server.hybridMode": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "oxc.enable": false,
-  "cSpell.words": [
-    "archiver",
-    "axios",
-    "dotenv",
-    "isequal",
-    "jspm",
-    "napi",
-    "nolebase",
-    "rollup",
-    "vitest"
-  ]
+  "oxc.enable": false
 }

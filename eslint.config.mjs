@@ -1,5 +1,1 @@
-// @ts-check
-
-import { defineConfig } from '@repo/eslint-config';
-
-export default defineConfig();
+export { default } from '@mylib/eslint-config';

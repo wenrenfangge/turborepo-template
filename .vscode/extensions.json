@@ -10,18 +10,18 @@
     "esbenp.prettier-vscode",
     // 支持 dotenv 文件语法
     "mikestead.dotenv",
-    // 源代码的拼写检查器
-    "streetsidesoftware.code-spell-checker",
-    // Tailwind CSS 的官方 VS Code 插件
-    "bradlc.vscode-tailwindcss",
     // iconify 图标插件
     "antfu.iconify",
-    // i18n 插件
-    "Lokalise.i18n-ally",
-    // CSS 变量提示
-    "vunguyentuan.vscode-css-variables",
-    // 在 package.json 中显示 PNPM catalog 的版本
-    "antfu.pnpm-catalog-lens"
+    // Markdown 格式化支持
+    "yzhang.markdown-all-in-one",
+    // 统一编辑器代码风格
+    "editorconfig.editorconfig",
+    // 显示 PNPM catalogs 版本信息
+    "antfu.pnpm-catalog-lens",
+    // 单词拼写检查
+    "streetsidesoftware.code-spell-checker",
+    // 多行字符串高亮
+    "tobermory.es6-string-html"
   ],
   "unwantedRecommendations": [
     // 和 volar 冲突

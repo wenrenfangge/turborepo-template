@@ -1,45 +1,40 @@
 {
-  "$schema": "https://turborepo.com/schema.json",
-  "globalDependencies": [
-    "pnpm-lock.yaml",
-    "**/.env.*local",
-    "**/tsconfig*.json",
-    "internal/node-utils/*.json",
-    "internal/node-utils/src/**/*.ts",
-    "internal/tailwind-config/src/**/*.ts",
-    "internal/vite-config/*.json",
-    "internal/vite-config/src/**/*.ts",
-    "scripts/*/src/**/*.ts",
-    "scripts/*/src/**/*.json"
-  ],
-  "globalEnv": ["NODE_ENV"],
+  // Turbo 配置文件的 JSON Schema
+  "$schema": "https://turbo.build/schema.json",
   "tasks": {
+    // 构建任务
     "build": {
+      // 依赖其他包的 build 任务完成
       "dependsOn": ["^build"],
-      "outputs": [
-        "dist/**",
-        "dist.zip",
-        ".vitepress/dist.zip",
-        ".vitepress/dist/**"
-      ]
-    },
-    "preview": {
-      "dependsOn": ["^build"],
+      // 构建任务的输入文件
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      // 构建任务的输出目录
       "outputs": ["dist/**"]
     },
-    "build:analyze": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
-    },
-    "test:e2e": {},
+    // lint 检查任务
+    "lint": {},
+    // 清理任务
+    "clean": {},
+    // 开发任务
     "dev": {
-      "dependsOn": [],
-      "outputs": [],
+      // 不缓存开发任务
       "cache": false,
+      // 持久运行的任务
       "persistent": true
     },
-    "typecheck": {
-      "outputs": []
+    // 测试任务
+    "test": {
+      "inputs": ["src/**/*.{ts,tsx,vue}", "**/*.spec.ts", "**/*.test.ts"]
+    },
+    // 测试覆盖率任务
+    "test:coverage": {
+      "dependsOn": ["test"],
+      "outputs": ["coverage/**"]
+    },
+    // 发包
+    "publish": {
+      // 任务开始运行前需要完成的任务列表
+      "dependsOn": ["build"] // 发包前先打包
     }
   }
 }
