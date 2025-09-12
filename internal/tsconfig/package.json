@@ -2,20 +2,20 @@
   "name": "@repo/tsconfig",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
     "directory": "internal/tsconfig"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "license": "MIT",
   "author": {
     "name": "wenrenfangge",
     "email": "wenrenfangge@foxmail.com",
     "url": "https://github.com/wenrenfangge"
   },
-  "license": "GPL-2.0-only"
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

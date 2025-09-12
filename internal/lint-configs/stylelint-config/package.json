@@ -9,7 +9,7 @@
     "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
     "directory": "internal/lint-configs/stylelint-config"
   },
-  "license": "GPL-2.0",
+  "license": "MIT",
   "type": "module",
   "files": [
     "dist"

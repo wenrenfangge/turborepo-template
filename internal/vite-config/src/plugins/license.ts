@@ -21,6 +21,7 @@ async function viteLicensePlugin(
     description = '',
     homepage = '',
     version = '',
+    projectName = 'turborepo-template',
   } = await readPackageJSON(root);
 
   return {
@@ -30,15 +31,15 @@ async function viteLicensePlugin(
       handler: (_options: NormalizedOutputOptions, bundle: OutputBundle) => {
         const date = dateUtil().format('YYYY-MM-DD ');
         const copyrightText = `/*!
-  * repo Admin
+  * ${projectName}
   * Version: ${version}
-  * Author: repo
-  * Copyright (C) 2024 repo
+  * Author: 闻人放歌
+  * Copyright (C) 2025 ${projectName}
   * License: MIT License
   * Description: ${description}
   * Date Created: ${date}
   * Homepage: ${homepage}
-  * Contact: ann.repo@gmail.com
+  * Contact: wenrenfangge@foxmail.com
 */
               `.trim();
 

@@ -42,10 +42,7 @@
     "clean": "node ./scripts/clean.mjs",
     "commit": "czg",
     "dev": "turbo-run dev",
-    "dev:antd": "pnpm -F @vben/web-antd run dev",
     "dev:docs": "pnpm -F @vben/docs run dev",
-    "dev:ele": "pnpm -F @vben/web-ele run dev",
-    "dev:naive": "pnpm -F @vben/web-naive run dev",
     "dev:play": "pnpm -F @vben/playground run dev",
     "format": "vsh lint --format",
     "lint": "vsh lint",
@@ -58,7 +55,9 @@
     "test:e2e": "turbo run test:e2e",
     "update:deps": "npx taze -r -w",
     "version": "pnpm exec changeset version && pnpm install --no-frozen-lockfile",
-    "catalog": "node ./scripts/catalog/sync-catalog.mjs"
+    "catalog": "node ./scripts/catalog/sync-catalog.mjs",
+    "prepare": "husky",
+    "rename-pkg": "bash ./scripts/renamePkg/rename-package.sh"
   },
   "devDependencies": {
     "@changesets/changelog-github": "catalog:",
@@ -80,6 +79,7 @@
     "cross-env": "catalog:",
     "cspell": "catalog:",
     "happy-dom": "catalog:",
+    "husky": "catalog:",
     "is-ci": "catalog:",
     "lefthook": "catalog:",
     "playwright": "catalog:",

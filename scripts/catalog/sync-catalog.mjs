@@ -4,19 +4,20 @@
  * @description Sync dependencies to pnpm-workspace catalog
  * @since 2025-09-05
  */
-import fs from "fs";
-import path from "path";
-import yaml from "js-yaml";
+import fs from 'node:fs';
+import path from 'node:path';
+
+import yaml from 'js-yaml';
 
 const rootDir = process.cwd();
-const pkgPath = path.join(rootDir, "package.json");
-const catalogPath = path.join(rootDir, "pnpm-workspace.yaml");
+const pkgPath = path.join(rootDir, 'package.json');
+const catalogPath = path.join(rootDir, 'pnpm-workspace.yaml');
 
-const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf-8"));
-const workspaceYaml = yaml.load(fs.readFileSync(catalogPath, "utf-8"));
+const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+const workspaceYaml = yaml.load(fs.readFileSync(catalogPath, 'utf8'));
 
-const catalogWord = "catalog:";
-const workspaceWord = "workspace:*";
+const catalogWord = 'catalog:';
+const workspaceWord = 'workspace:*';
 
 if (!workspaceYaml.catalog) {
   workspaceYaml.catalog = {};
@@ -25,7 +26,7 @@ if (!workspaceYaml.catalog) {
 function syncCatalog(deeps) {
   if (!deeps) return;
   for (const [name, version] of Object.entries(deeps)) {
-    if (name.includes("@repo")) {
+    if (name.includes('@repo')) {
       if (version.trim() === workspaceWord) {
         continue;
       }
@@ -41,10 +42,11 @@ function syncCatalog(deeps) {
       deeps[name] = catalogWord;
     }
   }
+  console.log('✅ Sync complete');
 }
 
 syncCatalog(pkg.dependencies);
 syncCatalog(pkg.devDependencies);
 
-fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + "\n");
-fs.writeFileSync(catalogPath, yaml.dump(workspaceYaml), "utf-8");
+fs.writeFileSync(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`);
+fs.writeFileSync(catalogPath, yaml.dump(workspaceYaml), 'utf8');

@@ -2,20 +2,22 @@
   "name": "@repo/catalog",
   "version": "1.0.0",
   "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "keywords": [],
+  "homepage": "https://github.com/wenrenfangge/turborepo-template#readme",
+  "bugs": {
+    "url": "https://github.com/wenrenfangge/turborepo-template/issues",
+    "email": "wenrenfangge@foxmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/yourrepo.git",
+    "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
     "directory": "scripts/catalog"
   },
-  "bugs": {
-    "url": "https://github.com/yourusername/yourrepo/issues",
-    "email": "yourusername@yourdomain.com"
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/yourusername/yourrepo#readme",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "js-yaml": "catalog:"
+  }
 }

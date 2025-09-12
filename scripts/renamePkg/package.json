@@ -1,0 +1,12 @@
+{
+  "name": "@repo/renamePkg",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
+    "directory": "scripts/renamePkg"
+  },
+  "license": "MIT",
+  "main": "index.js"
+}
