@@ -56,7 +56,6 @@
     "update:deps": "npx taze -r -w",
     "version": "pnpm exec changeset version && pnpm install --no-frozen-lockfile",
     "catalog": "node ./scripts/catalog/sync-catalog.mjs",
-    "prepare": "husky",
     "rename-pkg": "bash ./scripts/renamePkg/rename-package.sh"
   },
   "devDependencies": {
@@ -67,6 +66,7 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/stylelint-config": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
     "@repo/tsconfig": "workspace:*",
     "@repo/turbo-run": "workspace:*",
     "@repo/vite-config": "workspace:*",
@@ -79,7 +79,6 @@
     "cross-env": "catalog:",
     "cspell": "catalog:",
     "happy-dom": "catalog:",
-    "husky": "catalog:",
     "is-ci": "catalog:",
     "lefthook": "catalog:",
     "playwright": "catalog:",
