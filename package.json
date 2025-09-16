@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/wenrenfangge/turborepo-template.git"
   },
-  "license": "GPL-2.0-only",
+  "license": "MIT",
   "author": {
     "name": "wenrenfangge",
     "email": "wenrenfangge@foxmail.com",
