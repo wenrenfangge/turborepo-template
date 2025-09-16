@@ -1,0 +1,160 @@
+{
+  "folders": [
+    {
+      "name": "@repo/backend-mock",
+      "path": "apps/backend-mock",
+    },
+    {
+      "name": "@repo/docs",
+      "path": "docs",
+    },
+    {
+      "name": "@repo/commitlint-config",
+      "path": "internal/lint-configs/commitlint-config",
+    },
+    {
+      "name": "@repo/eslint-config",
+      "path": "internal/lint-configs/eslint-config",
+    },
+    {
+      "name": "@repo/prettier-config",
+      "path": "internal/lint-configs/prettier-config",
+    },
+    {
+      "name": "@repo/stylelint-config",
+      "path": "internal/lint-configs/stylelint-config",
+    },
+    {
+      "name": "@repo/node-utils",
+      "path": "internal/node-utils",
+    },
+    {
+      "name": "@repo/tailwind-config",
+      "path": "internal/tailwind-config",
+    },
+    {
+      "name": "@repo/tsconfig",
+      "path": "internal/tsconfig",
+    },
+    {
+      "name": "@repo/vite-config",
+      "path": "internal/vite-config",
+    },
+    {
+      "name": "@repo-core/design",
+      "path": "packages/@core/base/design",
+    },
+    {
+      "name": "@repo-core/icons",
+      "path": "packages/@core/base/icons",
+    },
+    {
+      "name": "@repo-core/shared",
+      "path": "packages/@core/base/shared",
+    },
+    {
+      "name": "@repo-core/typings",
+      "path": "packages/@core/base/typings",
+    },
+    {
+      "name": "@repo-core/composables",
+      "path": "packages/@core/composables",
+    },
+    {
+      "name": "@repo-core/preferences",
+      "path": "packages/@core/preferences",
+    },
+    {
+      "name": "@repo-core/form-ui",
+      "path": "packages/@core/ui-kit/form-ui",
+    },
+    {
+      "name": "@repo-core/layout-ui",
+      "path": "packages/@core/ui-kit/layout-ui",
+    },
+    {
+      "name": "@repo-core/menu-ui",
+      "path": "packages/@core/ui-kit/menu-ui",
+    },
+    {
+      "name": "@repo-core/popup-ui",
+      "path": "packages/@core/ui-kit/popup-ui",
+    },
+    {
+      "name": "@repo-core/shadcn-ui",
+      "path": "packages/@core/ui-kit/shadcn-ui",
+    },
+    {
+      "name": "@repo-core/tabs-ui",
+      "path": "packages/@core/ui-kit/tabs-ui",
+    },
+    {
+      "name": "@repo/constants",
+      "path": "packages/constants",
+    },
+    {
+      "name": "@repo/access",
+      "path": "packages/effects/access",
+    },
+    {
+      "name": "@repo/common-ui",
+      "path": "packages/effects/common-ui",
+    },
+    {
+      "name": "@repo/hooks",
+      "path": "packages/effects/hooks",
+    },
+    {
+      "name": "@repo/layouts",
+      "path": "packages/effects/layouts",
+    },
+    {
+      "name": "@repo/plugins",
+      "path": "packages/effects/plugins",
+    },
+    {
+      "name": "@repo/request",
+      "path": "packages/effects/request",
+    },
+    {
+      "name": "@repo/icons",
+      "path": "packages/icons",
+    },
+    {
+      "name": "@repo/locales",
+      "path": "packages/locales",
+    },
+    {
+      "name": "@repo/preferences",
+      "path": "packages/preferences",
+    },
+    {
+      "name": "@repo/stores",
+      "path": "packages/stores",
+    },
+    {
+      "name": "@repo/styles",
+      "path": "packages/styles",
+    },
+    {
+      "name": "@repo/types",
+      "path": "packages/types",
+    },
+    {
+      "name": "@repo/utils",
+      "path": "packages/utils",
+    },
+    {
+      "name": "@repo/playground",
+      "path": "playground",
+    },
+    {
+      "name": "@repo/turbo-run",
+      "path": "scripts/turbo-run",
+    },
+    {
+      "name": "@repo/vsh",
+      "path": "scripts/vsh",
+    },
+  ],
+}

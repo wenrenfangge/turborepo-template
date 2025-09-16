@@ -56,7 +56,8 @@
     "update:deps": "npx taze -r -w",
     "version": "pnpm exec changeset version && pnpm install --no-frozen-lockfile",
     "catalog": "node ./scripts/catalog/sync-catalog.mjs",
-    "rename-pkg": "bash ./scripts/renamePkg/rename-package.sh"
+    "rename-pkg": "bash ./scripts/renamePkg/rename-package.sh",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@changesets/changelog-github": "catalog:",
@@ -76,11 +77,14 @@
     "@vitejs/plugin-vue-jsx": "catalog:",
     "@vue/test-utils": "catalog:",
     "autoprefixer": "catalog:",
+    "commitlint-plugin-function-rules": "catalog:",
     "cross-env": "catalog:",
     "cspell": "catalog:",
     "happy-dom": "catalog:",
+    "husky": "catalog:",
     "is-ci": "catalog:",
     "lefthook": "catalog:",
+    "lint-staged": "^16.1.6",
     "playwright": "catalog:",
     "rimraf": "catalog:",
     "tailwindcss": "catalog:",
