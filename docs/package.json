@@ -4,6 +4,11 @@
   "description": "",
   "private": true,
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
+    "directory": "docs"
+  },
   "license": "MIT",
   "scripts": {
     "build": "vitepress build",
