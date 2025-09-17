@@ -14,7 +14,6 @@ const allowedScopes = [
   'deploy',
   'other',
 ];
-console.log('allowedScopes:', allowedScopes);
 // precomputed scope
 const scopeComplete = execSync('git status --porcelain || true')
   .toString()
