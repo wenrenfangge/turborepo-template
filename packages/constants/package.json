@@ -1,0 +1,25 @@
+{
+  "name": "@repo/constants",
+  "version": "5.5.9",
+  "homepage": "https://github.com/wenrenfangge/turborepo-template",
+  "bugs": "https://github.com/wenrenfangge/turborepo-template/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
+    "directory": "packages/constants"
+  },
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@repo-core/shared": "workspace:*"
+  }
+}

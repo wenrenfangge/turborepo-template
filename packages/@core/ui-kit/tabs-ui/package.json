@@ -1,0 +1,47 @@
+{
+  "name": "@repo-core/tabs-ui",
+  "version": "5.5.9",
+  "homepage": "https://github.com/wenrenfangge/turborepo-template",
+  "bugs": "https://github.com/wenrenfangge/turborepo-template/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
+    "directory": "packages/@repo-core/uikit/tabs-ui"
+  },
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm unbuild",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "dependencies": {
+    "@repo-core/composables": "workspace:*",
+    "@repo-core/icons": "workspace:*",
+    "@repo-core/shadcn-ui": "workspace:*",
+    "@repo-core/typings": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "vue": "catalog:"
+  }
+}

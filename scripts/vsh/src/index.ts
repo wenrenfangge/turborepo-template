@@ -41,7 +41,7 @@ async function main(): Promise<void> {
         '\n',
         Object.entries(COMMAND_DESCRIPTIONS)
           .map(([cmd, desc]) => `  ${colors.cyan(cmd)} - ${desc}`)
-          .join('\n')
+          .join('\n'),
       );
       process.exit(1);
     });
@@ -57,7 +57,7 @@ async function main(): Promise<void> {
     consola.error(
       colors.red('An unexpected error occurred:'),
       '\n',
-      error instanceof Error ? error.message : error
+      error instanceof Error ? error.message : error,
     );
     process.exit(1);
   }
@@ -68,7 +68,7 @@ main().catch((error) => {
   consola.error(
     colors.red('Failed to start CLI:'),
     '\n',
-    error instanceof Error ? error.message : error
+    error instanceof Error ? error.message : error,
   );
   process.exit(1);
 });

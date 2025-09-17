@@ -64,7 +64,7 @@ function cleanDepcheckResult(unused: DepcheckResult): void {
   // 清理路径依赖
   Object.keys(unused.missing).forEach((key) => {
     unused.missing[key] = (unused.missing[key] || []).filter(
-      (item: string) => !item.startsWith('/')
+      (item: string) => !item.startsWith('/'),
     );
     if (unused.missing[key].length === 0) {
       Reflect.deleteProperty(unused.missing, key);
@@ -146,14 +146,17 @@ async function runDepcheck(config: DepcheckConfig = {}): Promise<void> {
           hasIssues = true;
           formatDepcheckResult(pkg.packageJson.name, unused);
         }
-      })
+      }),
     );
 
     if (!hasIssues) {
       console.log('\n✅ Dependency check completed, no issues found');
     }
   } catch (error) {
-    console.error('❌ Dependency check failed:', error instanceof Error ? error.message : error);
+    console.error(
+      '❌ Dependency check failed:',
+      error instanceof Error ? error.message : error,
+    );
   }
 }
 
@@ -164,9 +167,18 @@ async function runDepcheck(config: DepcheckConfig = {}): Promise<void> {
 function defineDepcheckCommand(cac: CAC): void {
   cac
     .command('check-dep')
-    .option('--ignore-packages <packages>', 'Packages to ignore, comma separated')
-    .option('--ignore-matches <matches>', 'Dependency patterns to ignore, comma separated')
-    .option('--ignore-patterns <patterns>', 'File patterns to ignore, comma separated')
+    .option(
+      '--ignore-packages <packages>',
+      'Packages to ignore, comma separated',
+    )
+    .option(
+      '--ignore-matches <matches>',
+      'Dependency patterns to ignore, comma separated',
+    )
+    .option(
+      '--ignore-patterns <patterns>',
+      'File patterns to ignore, comma separated',
+    )
     .usage('Analyze project dependencies')
     .action(async ({ ignoreMatches, ignorePackages, ignorePatterns }) => {
       const config: DepcheckConfig = {

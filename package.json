@@ -27,12 +27,12 @@
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 turbo build",
     "build:analyze": "turbo build:analyze",
-    "build:antd": "pnpm run build --filter=@vben/web-antd",
+    "build:antd": "pnpm run build --filter=@repo/web-antd",
     "build:docker": "./scripts/deploy/build-local-docker-image.sh",
-    "build:docs": "pnpm run build --filter=@vben/docs",
-    "build:ele": "pnpm run build --filter=@vben/web-ele",
-    "build:naive": "pnpm run build --filter=@vben/web-naive",
-    "build:play": "pnpm run build --filter=@vben/playground",
+    "build:docs": "pnpm run build --filter=@repo/docs",
+    "build:ele": "pnpm run build --filter=@repo/web-ele",
+    "build:naive": "pnpm run build --filter=@repo/web-naive",
+    "build:play": "pnpm run build --filter=@repo/playground",
     "changeset": "pnpm exec changeset",
     "check": "pnpm run check:circular && pnpm run check:dep && pnpm run check:type && pnpm check:cspell",
     "check:circular": "vsh check-circular",
@@ -42,8 +42,8 @@
     "clean": "node ./scripts/clean.mjs",
     "commit": "czg",
     "dev": "turbo-run dev",
-    "dev:docs": "pnpm -F @vben/docs run dev",
-    "dev:play": "pnpm -F @vben/playground run dev",
+    "dev:docs": "pnpm -F @repo/docs run dev",
+    "dev:play": "pnpm -F @repo/playground run dev",
     "format": "vsh lint --format",
     "lint": "vsh lint",
     "postinstall": "pnpm -r run stub --if-present",
@@ -57,7 +57,11 @@
     "version": "pnpm exec changeset version && pnpm install --no-frozen-lockfile",
     "catalog": "node ./scripts/catalog/sync-catalog.mjs",
     "rename-pkg": "bash ./scripts/renamePkg/rename-package.sh",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint:eslint": "eslint --max-warnings 0 \"**/*.{ts,tsx,js,jsx,cjs,mjs,vue}\" --fix",
+    "lint:format": "prettier --write \"**/*.{js,jsx,cjs,ts,tsx,mjs,mts,md,vue,scss,css,less,html,json}\"",
+    "lint:style": "stylelint \"**/*.{css,scss,less}\" --fix",
+    "lint:staged": "pnpm exec lint-staged"
   },
   "devDependencies": {
     "@changesets/changelog-github": "catalog:",
@@ -84,7 +88,7 @@
     "husky": "catalog:",
     "is-ci": "catalog:",
     "lefthook": "catalog:",
-    "lint-staged": "^16.1.6",
+    "lint-staged": "catalog:",
     "playwright": "catalog:",
     "rimraf": "catalog:",
     "tailwindcss": "catalog:",
@@ -97,8 +101,8 @@
     "vue-tsc": "catalog:"
   },
   "engines": {
-    "node": ">=22.12.0",
-    "pnpm": ">=10.15.1"
+    "node": ">=20.10.0",
+    "pnpm": ">=9.12.0"
   },
   "packageManager": "pnpm@10.15.1",
   "pnpm": {

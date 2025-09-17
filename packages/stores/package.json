@@ -1,0 +1,32 @@
+{
+  "name": "@repo/stores",
+  "version": "5.5.9",
+  "homepage": "https://github.com/wenrenfangge/turborepo-template",
+  "bugs": "https://github.com/wenrenfangge/turborepo-template/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
+    "directory": "packages/stores"
+  },
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@repo-core/preferences": "workspace:*",
+    "@repo-core/shared": "workspace:*",
+    "@repo-core/typings": "workspace:*",
+    "pinia": "catalog:",
+    "pinia-plugin-persistedstate": "catalog:",
+    "secure-ls": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  }
+}

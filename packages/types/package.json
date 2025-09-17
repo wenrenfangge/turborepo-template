@@ -1,18 +1,14 @@
 {
   "name": "@repo/types",
-  "version": "1.0.0",
-  "description": "",
+  "version": "5.5.9",
+  "homepage": "https://github.com/wenrenfangge/turborepo-template",
+  "bugs": "https://github.com/wenrenfangge/turborepo-template/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
     "directory": "packages/types"
   },
   "license": "MIT",
-  "author": {
-    "name": "wenrenfangge",
-    "email": "wenrenfangge@foxmail.com",
-    "url": "https://github.com/wenrenfangge"
-  },
   "type": "module",
   "exports": {
     ".": {
@@ -20,8 +16,12 @@
       "default": "./src/index.ts"
     },
     "./global": {
-      "types": "./src/global.d.ts",
-      "default": "./src/global.d.ts"
+      "types": "./global.d.ts"
     }
+  },
+  "dependencies": {
+    "@repo-core/typings": "workspace:*",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
   }
 }

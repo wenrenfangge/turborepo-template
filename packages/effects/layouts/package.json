@@ -1,0 +1,43 @@
+{
+  "name": "@repo/layouts",
+  "version": "5.5.9",
+  "homepage": "https://github.com/wenrenfangge/turborepo-template",
+  "bugs": "https://github.com/wenrenfangge/turborepo-template/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenrenfangge/turborepo-template.git",
+    "directory": "packages/effects/layouts"
+  },
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@repo-core/composables": "workspace:*",
+    "@repo-core/form-ui": "workspace:*",
+    "@repo-core/layout-ui": "workspace:*",
+    "@repo-core/menu-ui": "workspace:*",
+    "@repo-core/popup-ui": "workspace:*",
+    "@repo-core/shadcn-ui": "workspace:*",
+    "@repo-core/shared": "workspace:*",
+    "@repo-core/tabs-ui": "workspace:*",
+    "@repo/constants": "workspace:*",
+    "@repo/hooks": "workspace:*",
+    "@repo/icons": "workspace:*",
+    "@repo/locales": "workspace:*",
+    "@repo/preferences": "workspace:*",
+    "@repo/stores": "workspace:*",
+    "@repo/types": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  }
+}
